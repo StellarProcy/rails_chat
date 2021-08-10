@@ -184,6 +184,13 @@ GEM
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
     sqlite3 (1.4.2)
+    state_machines (0.5.0)
+    state_machines-activemodel (0.8.0)
+      activemodel (>= 5.1)
+      state_machines (>= 0.5.0)
+    state_machines-activerecord (0.8.0)
+      activerecord (>= 5.1)
+      state_machines-activemodel (>= 0.8.0)
     thor (1.1.0)
     tilt (2.0.10)
     turbolinks (5.2.1)
@@ -227,6 +234,7 @@ DEPENDENCIES
   simple_form
   spring
   sqlite3 (~> 1.4)
+  state_machines-activerecord
   turbolinks (~> 5)
   web-console (>= 4.1.0)
   webpacker (~> 5.0)
