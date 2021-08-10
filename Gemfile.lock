@@ -80,6 +80,8 @@ GEM
     connection_pool (2.2.5)
     crass (1.0.6)
     device (0.0.0)
+    email_validator (2.2.3)
+      activemodel
     erubi (1.10.0)
     execjs (2.8.1)
     factory_bot (6.2.0)
@@ -213,6 +215,7 @@ DEPENDENCIES
   bootstrap (~> 4.4.1)
   byebug
   device
+  email_validator
   factory_bot_rails
   jbuilder (~> 2.7)
   listen (~> 3.3)
