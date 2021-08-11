@@ -1,5 +1,5 @@
 FactoryBot.define do
-  sequence :string, aliases: %i[firstname lastname password] do |n|
+  sequence :string, aliases: %i[firstname lastname password text] do |n|
     "string-#{n}"
   end
 
