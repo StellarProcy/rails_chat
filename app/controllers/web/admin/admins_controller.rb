@@ -15,4 +15,8 @@ class Web::Admin::AdminsController < Web::Admin::ApplicationController
       render action: :new
     end
   end
+
+  def admins_attrs
+    params.require(:admin).permit(:email, :password)
+  end
 end
