@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
-  get '/signup' => 'users#new'
-  post '/users' => 'users#create'
+  scope module: :web do
+    resources :users, only: %i[index new create]
 
-  get '/' => 'user#index'
+    namespace :admin do
+      root to: 'admins#index'
+
+      resources :admins, only: %i[index new create]
+    end
+  end
 end

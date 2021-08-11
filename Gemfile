@@ -19,6 +19,8 @@ gem 'state_machines-activerecord'
 gem 'sqlite3', '~> 1.4'
 gem 'turbolinks', '~> 5'
 gem 'webpacker', '~> 5.0'
+gem 'jquery-rails'
+gem 'sprockets-rails'
 
 group :development do
   gem 'listen', '~> 3.3'
