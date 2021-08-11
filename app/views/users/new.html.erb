@@ -1,0 +1,20 @@
+<%= form_for :user, url: '/users' do |form| %>
+  <h2> Sign Up </h2>
+    
+  <%= form.label :login %>
+  <%= form.text_field :login %>
+  <%= form.label :firstname %>
+  <%= form.text_field :first_name %>
+  <%= form.label :lastname %>
+  <%= form.text_field :last_name %>
+  <%= form.label :username %>
+  <%= form.text_field :user_name %>
+   
+  <%= form.label :email %>
+  <%= form.text_field :email %>
+  
+  <%= form.label :password %>
+  <%= form.password_field :password %>
+   
+  <%=  submit_tag("Create Account") %>
+<% end %>
