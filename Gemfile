@@ -8,6 +8,7 @@ gem 'bootsnap', '>= 1.4.4', require: false
 gem 'bootstrap', '~> 4.4.1'
 gem 'device'
 gem 'email_validator'
+gem 'hamlit'
 gem 'jbuilder', '~> 2.7'
 gem 'puma', '~> 5.0'
 gem 'rails', '~> 6.1.4'
@@ -30,4 +31,5 @@ group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'factory_bot_rails'
 end
+
 
