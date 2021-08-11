@@ -1,0 +1,26 @@
+%nav.navbar.navbar-dark.navbar-expand-md.bg-dark
+  = link_to t('header.onlinecourses'), admin_root_path, class: 'navbar-brand'
+  #navbar.collapse.navbar-collapse
+    %ul.navbar-nav.mr-auto
+      %li.navbar-item
+        = active_link_to t('header.categories'), admin_categories_path, class: 'nav-link'
+      %li.navbar-item
+        = active_link_to t('header.sites'), admin_sites_path, class: 'nav-link'
+      %li.navbar-item
+        = active_link_to t('header.courses'), admin_courses_path, class: 'nav-link'
+      %li.navbar-item
+        = active_link_to t('header.intensives'), admin_intensives_path, class: 'nav-link'
+      %li.navbar-item
+        = active_link_to t('header.professions'), admin_professions_path, class: 'nav-link'
+      %li.navbar-item
+        = active_link_to t('header.vacancies'), admin_vacancies_path, class: 'nav-link'
+      %li.navbar-item
+        = active_link_to t('header.articles'), admin_articles_path, class: 'nav-link'
+      %li.navbar-item
+        = active_link_to t('header.books'), admin_books_path, class: 'nav-link'
+      %li.navbar-item
+        = active_link_to t('header.feedbacks'), admin_feedbacks_path, class: 'nav-link'
+    -#%ul.navbar-nav
+      -#%li
+        -#%div.email= current_admin.email
+        -#%div= link_to t('header.exit'), admin_session_path, data: {method: :delete}
