@@ -3,6 +3,8 @@ FactoryBot.define do
     "string-#{n}"
   end
 
+  sequence :text, aliases: %i[description]
+
   sequence :email do |n|
     "email-#{n}@email.com"
   end
