@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_11_134011) do
+ActiveRecord::Schema.define(version: 2021_08_16_133948) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,13 +26,22 @@ ActiveRecord::Schema.define(version: 2021_08_11_134011) do
     t.string "content"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "room_message_id"
+    t.index ["room_message_id"], name: "index_messages_on_room_message_id"
+  end
+
+  create_table "room_messages", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "rooms", force: :cascade do |t|
-    t.string "Name"
-    t.string "decription"
+    t.string "name"
+    t.text "decription"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "room_message_id"
+    t.index ["room_message_id"], name: "index_rooms_on_room_message_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -46,6 +55,11 @@ ActiveRecord::Schema.define(version: 2021_08_11_134011) do
     t.date "birthday"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "message_id", null: false
+    t.index ["message_id"], name: "index_users_on_message_id"
   end
 
+  add_foreign_key "messages", "room_messages"
+  add_foreign_key "rooms", "room_messages"
+  add_foreign_key "users", "messages"
 end
