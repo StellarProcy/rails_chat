@@ -5,6 +5,5 @@ FactoryBot.define do
     email
     firstname
     lastname
-    nickname
   end
 end

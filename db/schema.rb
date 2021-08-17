@@ -59,7 +59,6 @@ ActiveRecord::Schema.define(version: 2021_08_17_095404) do
     t.string "password_digest"
     t.string "firstname", null: false
     t.string "lastname"
-    t.string "nickname", null: false
     t.string "state"
     t.date "birthday"
     t.datetime "created_at", precision: 6, null: false
