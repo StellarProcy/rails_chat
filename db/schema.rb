@@ -54,13 +54,8 @@ ActiveRecord::Schema.define(version: 2021_08_17_095404) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "login", null: false
     t.string "email", null: false
     t.string "password_digest"
-    t.string "firstname", null: false
-    t.string "lastname"
-    t.string "state"
-    t.date "birthday"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "message_id"

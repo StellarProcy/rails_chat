@@ -1,9 +1,6 @@
 FactoryBot.define do
   factory :user do
-    login
-    password
+    password_digest
     email
-    firstname
-    lastname
   end
 end
