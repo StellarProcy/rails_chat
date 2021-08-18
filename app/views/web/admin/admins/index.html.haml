@@ -1,9 +1,0 @@
-= link_to 'Новый админ', new_admin_admin_path
-%table.table.table-hover
-  %thead
-    %th= Admin.human_attribute_name (:id)
-    %th= Admin.human_attribute_name (:email)
-  - @admins.each do |admin|
-    %tr
-      %td= admin.id
-      %td= admin.email
