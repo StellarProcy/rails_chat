@@ -1,6 +1,5 @@
 class RoomMessagesController < ApplicationController
   before_action :load_entities
-  skip_before_action :verify_authenticity_token
 
   def create
     @room_message = RoomMessage.create user: current_user,
