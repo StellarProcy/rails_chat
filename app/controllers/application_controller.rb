@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-  skip_before_action :verify_authenticity_token # временная мера на дебаг
+  skip_before_action :verify_authenticity_token # for debug
   before_action :authenticate_user!
 
   before_action :configure_permitted_parameters, if: :devise_controller?
